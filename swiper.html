@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/base.css">
+    <!-- 스와이퍼 플러그인 필수연결 -->
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- 내부스타일 & 스크립트 -->
+    <style>
+        .mainSlide{
+            width: 1000px; 
+            height: 300px; /* direction:vertical 일 경우 */
+            margin: 50px auto;}
+        .mainSlide .swiper-slide{height: 300px;} /* 테스트용 */
+        .mainSlide .s1{background-color: chartreuse;}
+        .mainSlide .s2{background-color: violet;}
+        .mainSlide .s3{background-color: steelblue;}
+
+        .eventBanner{width: 1200px; margin: 50px auto;}
+        .eventBanner .swiper-slide{height: 200px;}
+        .eventBanner .s1{background-color: slateblue;}
+        .eventBanner .s2{background-color: lightcoral;}
+        .eventBanner .s3{background-color: aquamarine;}
+    </style>
+
+</head>
+<body>
+    <!-- swiper 1 -->
+<div class="swiper mainSlide">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide s1">Slide 1</div>
+        <div class="swiper-slide s2">Slide 2</div>
+        <div class="swiper-slide s3">Slide 3</div>
+        
+    </div>
+</div>
+<!-- swiper 2 -->
+<div class="swiper eventBanner">
+    <div class="swiper-wrapper">
+        <div class="swiper-slide s1">Slide 1</div>
+        <div class="swiper-slide s2">Slide 2</div>
+        <div class="swiper-slide s3">Slide 3</div>
+    </div>
+</div>
+<script>
+    //swiper 태그 개수별로 별도의 변수 설정하기
+    //공통 클래스명(swiper)X
+    //개별 클래스 설정한 이름으로 연결하기!
+    //기본문법 옵션없음
+    //const 변수명 = new Swiper("적용 swiper클래스명")
+    //기본문법
+    //const 변수명 = new Swiper('적용 swiper클래스명',{속성:값, 속성:값})
+    const mineS = new Swiper('.mainSlide',{
+        /* direction:'vertical', 세로로 재생 */
+        effect: 'cube',
+        autoplay:{delay:1000},
+        loop: true
+    })
+    const evertS = new Swiper('.eventBanner',{
+        autoplay:{delay:1000},
+        loo
+    })
+
+
+</script>
+</body>
+</html>

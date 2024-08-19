@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style/base.css">
+    <!-- 스와이퍼 플러그인 필수연결 -->
+    <!--플러그인 필수 css cdn 연결-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <!--플러그인 필수 JS cdn 연결-->
+    <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <style>
+        main{
+            background: lightblue; width: 1200px; margin: 0 auto;
+        }
+        main .popular{padding: 30px 0;}
+        main .popular h1{font-size: 1.2rem; font-weight: 700;}
+        main .popular .container{margin: 40px 0; position: relative;}
+        main .popular .container .popular_s{background-color: lightcoral; width: 95%;}
+        main .popular .container .popular_s .swiper-slide{display: flex; flex-flow: column nowrap;}
+        main .popular .container .popular_s .swiper-slide a:first-child{
+            background-color: aqua;
+            width: 100%;
+            height: 200px;
+        }
+        main .popular .container .popular_s .swiper-slide a:first-child img{width: 100%;}
+        main .popular .container .popular_s .swiper-slide .category{color: yellowgreen;}
+        main .popular .container .popular_s .swiper-slide .book_name{margin: 10px 0; font-size: 1.1rem;}
+        main .popular .container .popular_s .swiper-slide .info{color: #aaa;}
+/* swiper-button은 absolute를 가지고 있기 때문에 위치를 자유롭게 설정할 수 있다 */
+        main .popular .container .swiper-button-prev{left: -50px;}
+        main .popular .container .swiper-button-next{right: -50px;}
+        main .popular .container .swiper-pagination{bottom: -50px;}
+    </style>
+</head>
+<body>
+    <main>
+        <div>...</div>
+        <div class="popular">
+            <h1>급상승! 많이 보고있는 상품</h1>
+            <div class="container">
+                <!-- swiper에는 position-relative 내장 -->
+                <div class="swiper popular_s">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <a href="#"><img src="#" alt="전설의프로"></a>
+                            <p class="category">경제/경영</p>
+                            <a href="#" class="book_name">전설의 프로 트레이더 박</a>
+                            <p class="inpo">빅터 스페란데오 | 액티브</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="#" alt="전설의프로"></a>
+                            <p class="category">경제/경영</p>
+                            <a href="#" class="book_name">전설의 프로 트레이더 박</a>
+                            <p class="inpo">빅터 스페란데오 | 액티브</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="#" alt="전설의프로"></a>
+                            <p class="category">경제/경영</p>
+                            <a href="#" class="book_name">전설의 프로 트레이더 박</a>
+                            <p class="inpo">빅터 스페란데오 | 액티브</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="#" alt="전설의프로"></a>
+                            <p class="category">경제/경영</p>
+                            <a href="#" class="book_name">전설의 프로 트레이더 박</a>
+                            <p class="inpo">빅터 스페란데오 | 액티브</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="#" alt="전설의프로"></a>
+                            <p class="category">경제/경영</p>
+                            <a href="#" class="book_name">전설의 프로 트레이더 박</a>
+                            <p class="inpo">빅터 스페란데오 | 액티브</p>
+                        </div>
+                        <div class="swiper-slide">
+                            <a href="#"><img src="#" alt="전설의프로"></a>
+                            <p class="category">경제/경영</p>
+                            <a href="#" class="book_name">전설의 프로 트레이더 박</a>
+                            <p class="inpo">빅터 스페란데오 | 액티브</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <div>...</div>
+    </main>
+
+    <script>
+        const popular_s = new Swiper(".popular_s",{
+            slidesPerView : 4, //한화면기준 보이는 슬라이드겟수
+            spaceBetween:20, //슬라이스사이간격
+            navigation:{
+                prevEl:'.popular .container .swiper-button-prev',
+                nextEl:'.popular .container .swiper-button-next',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+        })
+
+    </script>
+</body>
+</html>
